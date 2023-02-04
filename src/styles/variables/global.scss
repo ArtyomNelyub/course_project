@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+:root {
+  --font-family-main: Roboto, Arial, Sans-Serif;
+
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+  --font-m: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+}
