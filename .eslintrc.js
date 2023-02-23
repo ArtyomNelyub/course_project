@@ -3,14 +3,14 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
   parser: '@typescript-eslint/parser',
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   settings: {
     react: {
       version: 'detect',
@@ -30,6 +30,7 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,
