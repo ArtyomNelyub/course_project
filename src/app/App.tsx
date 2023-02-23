@@ -6,20 +6,20 @@ import { Sidebar } from 'widgets/sidebar';
 import { Suspense } from 'react';
 import './styles/index.scss';
 
-const App = () => {
+function App() {
   const { theme } = useTheme();
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback=''>
+      <Suspense fallback="">
         <Navbar />
-        <div className='content-page'>
+        <div className="content-page">
           <Sidebar />
           <AppRouter />
         </div>
       </Suspense>
     </div>
   );
-};
+}
 
 export default App;
