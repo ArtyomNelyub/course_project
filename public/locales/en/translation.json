@@ -1,5 +1,10 @@
 {
-  "Язык" : "English",
-  "Главная" : "Main",
-  "О сайте" : "About"
+  "lang": "English",
+  "main": "Main page",
+  "page not found": "Page not found",
+  "translate": "translate",
+  "about": "About",
+  "unpredictable error": "Unpredictable error",
+  "throw": "Throw error",
+  "update": "Update page"
 }

@@ -19,7 +19,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
           [
             'i18next-extract',
             {
-              locales: ['ru', 'en'],
+              locales: ['en', 'ru'],
               keyAsDefaultValue: true,
             },
           ],
@@ -46,6 +46,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       'sass-loader',
     ],
   };
+
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
