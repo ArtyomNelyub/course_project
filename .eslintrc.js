@@ -6,7 +6,6 @@ module.exports = {
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
   parser: '@typescript-eslint/parser',
-  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -17,6 +16,14 @@ module.exports = {
       version: 'detect',
     },
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts, tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', 'tsx'] }],
@@ -31,10 +38,17 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid'],
+      },
+    ],
     'max-len': ['error', { ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
   },
+
 };
