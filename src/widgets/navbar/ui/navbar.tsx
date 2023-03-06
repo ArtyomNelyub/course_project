@@ -11,14 +11,7 @@ export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation();
   return (
     <nav className={classNames(cls.navbar, {}, [className])}>
-      <div className={cls.links}>
-        <AppLink theme={AppLinkTheme.SECONDARY} to="/" className={cls.mainLink}>
-          {t('main')}
-        </AppLink>
-        <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
-          {t('about')}
-        </AppLink>
-      </div>
+      <div className={cls.links}>/</div>
     </nav>
   );
 };
