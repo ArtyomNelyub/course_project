@@ -5,11 +5,12 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  pipline: 
-    runs-on: ubuntu-latest
-    strategy: 
-      matrix: 
-        node-version: [ 17.x ] 
+  pipeline:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        node-version: [ 17.x ]
 
     steps:
       - uses: actions/checkout@v2
@@ -38,10 +39,6 @@ jobs:
       - name: build storybook
         run: npm run sb:build
         if: always()
-
-      - name: screenshot testing
-        run: npm run test:ui:ok
-        if: always() 
         
       - name: screenshot testing
         run: npm run test:ui:ci
