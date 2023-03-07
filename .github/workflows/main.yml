@@ -5,11 +5,12 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  pipline: 
-    runs-on: ubuntu-latest
-    strategy: 
-      matrix: 
-        node-version: [ 17.x ] 
+  pipeline:
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        os: [ windows-2019 ]
+        node-version: [ 17.x ]
 
     steps:
       - uses: actions/checkout@v2
