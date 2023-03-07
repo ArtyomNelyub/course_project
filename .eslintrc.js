@@ -38,10 +38,7 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
-    'linebreak-style': [
-      'error',
-      process.platform === 'win32' ? 'windows' : 'unix',
-    ],
+    'linebreak-style': 0,
     'i18next/no-literal-string': [
       'error',
       {
