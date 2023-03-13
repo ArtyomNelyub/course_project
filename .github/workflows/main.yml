@@ -6,10 +6,10 @@ on:
     branches: [ master ]
 jobs:
   pipline: 
-    runs-on: windows-2019
+    runs-on: windows-2022
     strategy: 
       matrix: 
-        node-version: [ 16.x ] 
+        node-version: [ 17.x ] 
 
     steps:
       - uses: actions/checkout@v2
@@ -41,4 +41,3 @@ jobs:
         
       - name: screenshot testing
         run: npm run test:ui:ci
-        if: always() 
